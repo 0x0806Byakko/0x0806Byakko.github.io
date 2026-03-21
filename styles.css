@@ -105,7 +105,7 @@ nav ul li a.active::after {
 /* Hero */
 .hero {
   text-align: center;
-  padding: 8rem 0 6rem 0;
+  padding: 1rem 0 0.5rem 0;
   background: radial-gradient(circle at top, rgba(0, 0, 0, 0.02) 0%, rgba(255, 255, 255, 0) 60%);
 }
 
@@ -118,12 +118,19 @@ nav ul li a.active::after {
   font-size: 1.25rem;
   color: var(--color-text-muted);
   font-weight: 400;
+  margin-bottom: 0;
 }
 
 /* Section Headlines */
 .section-title {
   font-size: 1.75rem;
   margin-bottom: 3rem;
+  text-align: center;
+}
+
+/* Latest Investigations Specifics */
+.latest-investigations {
+  padding-top: 0.5rem; /* Almost no space above the title */
   text-align: center;
 }
 
