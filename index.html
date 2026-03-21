@@ -1,23 +1,69 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Fernando Albarrán</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fernando Albarrán | Cyber Threat Intelligence | OSINT | SOC Analyst</title>
+    <meta name="description" content="Professional portfolio of Fernando Albarrán, a Cyber Threat Intelligence, OSINT specialist, and SOC Analyst.">
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Fernando Albarrán</h1>
-  <p>Analista en ciberseguridad | CTI | OSINT</p>
 
-  <h2>Sobre mí</h2>
-  <p>Criminólogo. Ciberinteligencia</p>
+<header>
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html" class="active">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="investigations.html">INVESTIGATIONS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
 
-  <h2>Investigaciones</h2>
-  <ul>
-    <li>Próximamente...</li>
-  </ul>
+<main>
+    <section class="hero container">
+        <h1>Fernando Albarrán</h1>
+        <p>Cyber Threat Intelligence | OSINT | SOC Analyst</p>
+    </section>
 
-  <p>
-    <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
-  </p>
+    <section class="container showcase">
+        <h2 class="section-title">Latest Investigations</h2>
+        <div class="grid">
+            <article class="card">
+                <span class="label">OSINT</span>
+                <h3>APT Group Attribution via Infrastructure Overlap</h3>
+                <p>An in-depth analysis of a recent phishing campaign and its correlation with historical APT group command-and-control infrastructure.</p>
+                <a href="#" class="btn-text">Read more →</a>
+            </article>
+
+            <article class="card">
+                <span class="label">Phishing</span>
+                <h3>Phishing-as-a-Service Platform Breakdown</h3>
+                <p>Mapping the backend and monetization strategy of a newly discovered Phishing-as-a-Service (PaaS) toolkit targeting European financial institutions.</p>
+                <a href="#" class="btn-text">Read more →</a>
+            </article>
+
+            <article class="card">
+                <span class="label">Infrastructure</span>
+                <h3>Malicious Domain Lifecycle: A 6-Month Study</h3>
+                <p>Tracking the registration, weaponization, and eventual blacklisting of 500 domain names used for credential harvesting.</p>
+                <a href="#" class="btn-text">Read more →</a>
+            </article>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2026 Fernando Albarrán. Analytical Portfolio.</p>
+    </div>
+</footer>
+
 </body>
 </html>
