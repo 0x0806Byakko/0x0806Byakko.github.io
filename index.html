@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fernando Albarrán | Cyber Threat Intelligence Analyst</title>
     <meta name="description"
-        content="Portafolio profesional de Fernando Albarrán, especializado en Inteligencia de Amenazas, OSINT y análisis de infraestructura.">
+        content="Portafolio profesional de Fernando Albarrán, especialista en Inteligencia de Amenazas, OSINT y análisis de infraestructura adversaria.">
     <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,6 +15,10 @@
 </head>
 
 <body>
+
+    <div class="logo-wrapper">
+        <img src="logo.png" alt="Branding Logo" class="corner-logo">
+    </div>
 
     <header>
         <nav>
@@ -30,56 +34,70 @@
     </header>
 
     <main>
-        <section class="hero container">
-            <h1 class="hero-name">Fernando Albarrán</h1>
-            <p class="hero-subtitle">Cyber Threat Intelligence Analyst</p>
-            <p class="hero-specialization">Especializado en OSINT y análisis de infraestructuras</p>
-            <div class="hero-summary">
-                <p>Análisis de campañas de ciberamenazas, identificación de infraestructura maliciosa y producción de
-                    inteligencia técnica.</p>
+        <section class="hero-wrapper">
+            <div class="hero container">
+                <h1 class="hero-name">Fernando Albarrán</h1>
+                <p class="hero-subtitle">Cyber Threat Intelligence Analyst</p>
+                <div class="hero-description">
+                    <p>Investigación de campañas de ciberamenazas, análisis de infraestructura adversaria y correlación de indicadores para la generación de inteligencia técnica.</p>
+                </div>
+                <a href="investigations.html" class="btn-primary">Ver investigaciones</a>
             </div>
         </section>
 
-        <section class="container showcase latest-investigations">
-            <h2 class="section-title">Últimas Investigaciones</h2>
-            <div class="grid">
-                <article class="card">
-                    <header class="card-meta">
-                        <span class="category">OSINT</span> · <span class="date">Marzo 2026</span>
-                    </header>
-                    <h3 class="card-title">Atribución de Grupos APT mediante Solapamiento de Infraestructura</h3>
-                    <p class="card-description">Un análisis profundo de una campaña de phishing reciente y su
-                        correlación con la infraestructura histórica de comando y control de grupos de amenazas
-                        persistentes.</p>
-                    <a href="#" class="btn-text">Ver informe completo →</a>
-                </article>
+        <section class="specialization-section">
+            <div class="container">
+                <div class="specialization-grid">
+                    <div class="specialization-item">
+                        <h3 class="spec-title">OSINT</h3>
+                        <p class="spec-text">Análisis de fuentes abiertas y correlación de información</p>
+                    </div>
+                    <div class="specialization-item">
+                        <h3 class="spec-title">INFRAESTRUCTURA</h3>
+                        <p class="spec-text">Identificación de activos y mapeo de infraestructura adversaria</p>
+                    </div>
+                    <div class="specialization-item">
+                        <h3 class="spec-title">THREAT INTELLIGENCE</h3>
+                        <p class="spec-text">Producción de inteligencia basada en indicadores técnicos</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                <article class="card">
-                    <header class="card-meta">
-                        <span class="category">Phishing</span> · <span class="date">Febrero 2026</span>
-                    </header>
-                    <h3 class="card-title">Análisis de Plataformas de Phishing-as-a-Service</h3>
-                    <p class="card-description">Mapeo del backend y la estrategia de monetización de un kit de
-                        herramientas de PaaS recién descubierto que afecta a instituciones financieras europeas.</p>
-                    <a href="#" class="btn-text">Leer análisis →</a>
-                </article>
+        <section class="investigations-wrapper">
+            <div class="container showcase latest-investigations">
+                <h2 class="section-title">Últimas Investigaciones</h2>
+                <div class="grid">
+                    
+                    <article class="card">
+                        <span class="card-category">Phishing</span>
+                        <h3 class="card-title">Análisis de infraestructura en campañas de phishing dirigidas</h3>
+                        <p class="card-description">Mapeo detallado de servidores de comando y control (C2) y dominios utilizados en campañas de suplantación de identidad contra el sector bancario europeo.</p>
+                        <a href="investigations.html" class="card-link">Leer informe →</a>
+                    </article>
 
-                <article class="card">
-                    <header class="card-meta">
-                        <span class="category">Infraestructura</span> · <span class="date">Enero 2026</span>
-                    </header>
-                    <h3 class="card-title">Ciclo de Vida de Dominios Maliciosos: Un Estudio de 6 Meses</h3>
-                    <p class="card-description">Seguimiento del registro, armamento y eventual lista negra de 500
-                        nombres de dominio utilizados para el robo de credenciales en campañas activas.</p>
-                    <a href="#" class="btn-text">Ver informe completo →</a>
-                </article>
+                    <article class="card">
+                        <span class="card-category">APT Activity</span>
+                        <h3 class="card-title">Correlación de indicadores en actividad APT detectada</h3>
+                        <p class="card-description">Estudio técnico sobre solapamientos de infraestructura y patrones de despliegue de malware de grupos de amenazas persistentes avanzadas detectadas recientemente.</p>
+                        <a href="investigations.html" class="card-link">Leer informe →</a>
+                    </article>
+
+                    <article class="card">
+                        <span class="card-category">OSINT</span>
+                        <h3 class="card-title">Investigación de huella digital de infraestructura adversaria</h3>
+                        <p class="card-description">Uso de técnicas avanzadas de OSINT para el descubrimiento de activos expuestos y topologías de red en infraestructuras de ataque.</p>
+                        <a href="investigations.html" class="card-link">Leer informe →</a>
+                    </article>
+
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 Fernando Albarrán. Analista de Inteligencia y OSINT</p>
+            <p>&copy; 2026 Fernando Albarrán. Analista de Inteligencia de Amenazas</p>
         </div>
     </footer>
 
