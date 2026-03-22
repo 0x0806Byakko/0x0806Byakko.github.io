@@ -2,11 +2,13 @@
 :root {
     --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     --color-background: #ffffff;
-    --color-surface: #f8f9fa; /* More structured grey */
+    --color-surface: #f8f9fa;
+    /* More structured grey */
     --color-border: #eeeeee;
     --color-text-main: #1a1c1e;
     --color-text-muted: #5f6368;
-    --color-accent: #1f3a5f; /* Deep Navy Blue - Professional & Technical */
+    --color-accent: #1f3a5f;
+    /* Deep Navy Blue - Professional & Technical */
     --container-width: 1000px;
     --transition-base: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
@@ -43,12 +45,13 @@ body::after {
     top: 0;
     bottom: 0;
     width: 1px;
-    background-color: #E5E5E5; /* More solid grey as requested */
+    background-color: #E5E5E5;
+    /* More solid grey as requested */
     z-index: -1;
 }
 
 body::before {
-    left: calc(50% - 500px); 
+    left: calc(50% - 500px);
 }
 
 body::after {
@@ -60,7 +63,8 @@ body::after {
     top: 0;
     bottom: 0;
     left: 0;
-    width: 2px; /* Thinner sidebar as requested */
+    width: 2px;
+    /* Thinner sidebar as requested */
     background-color: #4E6A82;
     opacity: 0.2;
     z-index: 10;
@@ -72,7 +76,9 @@ a {
     transition: var(--transition-base);
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-weight: 700;
     line-height: 1.5;
     letter-spacing: 0.5px;
@@ -92,7 +98,8 @@ main {
 nav {
     position: sticky;
     top: 0;
-    background-color: rgba(246, 246, 247, 0.98); /* Subtle grayish tone */
+    background-color: rgba(246, 246, 247, 0.98);
+    /* Subtle grayish tone */
     backdrop-filter: blur(12px);
     z-index: 2000;
     border-bottom: 1px solid var(--color-border);
@@ -102,7 +109,8 @@ nav .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80px; /* Slightly more breathing room */
+    height: 80px;
+    /* Slightly more breathing room */
 }
 
 nav ul {
@@ -146,41 +154,50 @@ nav ul li a.active::after {
    CRITICAL: LOGO STYLES (DO NOT TOUCH PER USER REQUEST)
    ========================================================================= */
 .logo-wrapper {
-  position: absolute;
-  top: 1.25rem;
-  right: 2rem;
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #f5f5f5;
-  border: 1px solid rgba(0,0,0,0.1);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  z-index: 2500;
-  transition: transform 0.2s ease;
+    position: absolute;
+    top: 1.25rem;
+    right: 2rem;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    z-index: 2500;
+    transition: transform 0.2s ease;
 }
 
 .logo-wrapper:hover {
-  transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 .corner-logo {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  mix-blend-mode: multiply; /* Removes white background from line art */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    mix-blend-mode: multiply;
+    /* Removes white background from line art */
 }
+
+/* Page Specific Logo Alignment */
+.logo-left {
+    right: auto !important;
+    left: 2rem !important;
+}
+
 /* ========================================================================= */
 
 /* Hero Section */
 .hero-wrapper {
     background-color: #ffffff;
     border-bottom: 1px solid var(--color-border);
-    padding: 8rem 0; /* More vertical presence */
+    padding: 8rem 0;
+    /* More vertical presence */
 }
 
 .hero {
@@ -206,7 +223,8 @@ nav ul li a.active::after {
 
 .hero-description {
     max-width: 580px;
-    margin: 1.5rem auto 2rem auto; /* Reduced bottom margin to button */
+    margin: 1.5rem auto 2rem auto;
+    /* Reduced bottom margin to button */
     font-size: 1.1rem;
     color: var(--color-text-muted);
     line-height: 1.8;
@@ -215,10 +233,13 @@ nav ul li a.active::after {
 /* Specialization Section */
 .specialization-section {
     padding: 6rem 0;
-    background-color: #f8f9fa; 
-    border-top: 1px solid #D0D0D0; /* Horizontal separator */
-    border-bottom: 1px solid #D0D0D0; /* Horizontal separator */
-    background-image: radial-gradient(#d1d5db 0.5px, transparent 0.5px); /* Subtle mesh/dots pattern */
+    background-color: #f8f9fa;
+    border-top: 1px solid #D0D0D0;
+    /* Horizontal separator */
+    border-bottom: 1px solid #D0D0D0;
+    /* Horizontal separator */
+    background-image: radial-gradient(#d1d5db 0.5px, transparent 0.5px);
+    /* Subtle mesh/dots pattern */
     background-size: 20px 20px;
 }
 
@@ -267,14 +288,16 @@ nav ul li a.active::after {
 
 /* Investigations Section */
 .investigations-wrapper {
-    background-color: #ffffff; /* Alternating back to white */
+    background-color: #ffffff;
+    /* Alternating back to white */
     padding: 8rem 0;
 }
 
 .section-title {
     font-size: 1rem;
     font-weight: 700;
-    margin-bottom: 3rem; /* Adjusted for the line below */
+    margin-bottom: 3rem;
+    /* Adjusted for the line below */
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.25em;
@@ -314,16 +337,19 @@ nav ul li a.active::after {
     background-color: #ffffff;
     border: 1px solid #E5E5E5;
     padding: 3rem;
-    border-radius: 8px; /* Within requested 5px-8px range */
+    border-radius: 8px;
+    /* Within requested 5px-8px range */
     transition: var(--transition-base);
     display: flex;
     flex-direction: column;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* Soft shadow as requested */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    /* Soft shadow as requested */
 }
 
 .card:hover {
-    transform: translateY(-3px); /* Hover effect as requested */
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transform: translateY(-3px);
+    /* Hover effect as requested */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
     border-color: #D6D6D6;
 }
 
@@ -363,11 +389,13 @@ nav ul li a.active::after {
     text-transform: uppercase;
     letter-spacing: 0.12em;
     padding: 0.8rem 1.6rem;
-    border: 1px solid rgba(31, 58, 95, 0.15); /* Subtle accent border */
+    border: 1px solid rgba(31, 58, 95, 0.15);
+    /* Subtle accent border */
     border-radius: 4px;
     width: fit-content;
     transition: var(--transition-base);
-    background-color: #f8f9fa; /* Light grey block */
+    background-color: #f8f9fa;
+    /* Light grey block */
 }
 
 .card-link:hover {
@@ -381,28 +409,331 @@ nav ul li a.active::after {
 .btn-primary {
     display: inline-block;
     padding: 1.1rem 3rem;
-    background-color: #4E6A82; /* Professional grayish blue */
+    background-color: #4E6A82;
+    /* Professional grayish blue */
     border: none;
     color: #ffffff;
     font-size: 0.85rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.15em;
-    border-radius: 10px; /* Rounded corners as requested */
+    border-radius: 10px;
+    /* Rounded corners as requested */
     transition: var(--transition-base);
     cursor: pointer;
 }
 
 .btn-primary:hover {
-    background-color: #3d5469; /* Darker blue for contrast */
-    transform: scale(1.02);
-    box-shadow: 0 8px 24px rgba(78, 106, 130, 0.2);
+    background-color: #3d5469;
+    /* Darker blue for contrast */
+    transform: translateY(-2px);
+    /* Gentle lift as requested */
+    box-shadow: 0 6px 20px rgba(78, 106, 130, 0.3);
 }
 
-/* Footer */
+/* About Page Specifics */
+.about-hero-wrapper {
+    padding: 1.5rem 0 1rem;
+    /* Top padding minimized to lift everything up */
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 4rem;
+    /* Prominent as shown in image */
+    font-weight: 800;
+    margin-bottom: 0;
+    /* Gap for the line and subtitle */
+    color: var(--color-text-main);
+    letter-spacing: -2.5px;
+    display: block;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.hero-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    /* Line is between title and subtitle */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    /* Centered line as shown */
+    height: 1px;
+    background-color: #D6D6D6;
+    /* Light grey as shown */
+}
+
+.hero-name-block {
+    margin-top: 0.8rem;
+    text-align: center;
+}
+
+.profile-name {
+    font-size: 3rem;
+    /* Adjusted for hero presence */
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    color: var(--color-text-main);
+    letter-spacing: -1px;
+}
+
+.profile-role {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    /* More breathing room as in image */
+}
+
+.profile-section {
+    padding: 2rem 0 8rem;
+    background-color: #ffffff;
+}
+
+.profile-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    padding: 2rem 0;
+    position: relative; /* Added to contain absolute images */
+}
+
+.profile-photo-container {
+    position: absolute;
+    left: -12rem; /* Absolute position instead of flex translation */
+    top: -12rem;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid rgba(255, 255, 255, 1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08), 0 0 0 1px #E5E5E5;
+    z-index: 2; /* Keep it above if it overlaps */
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-info {
+    max-width: 600px;
+    text-align: center; /* Center the text inside */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+.profile-dog-container {
+    position: absolute;
+    right: -18rem; /* Absolute position instead of flex translation */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    z-index: 0; /* Keep it below text */
+}
+
+.profile-dog-img {
+    width: 100%;
+    height: auto;
+    mix-blend-mode: multiply;
+    opacity: 0.85;
+}
+
+/* Removed duplicate profile name/role styles from here as they are now in the hero context */
+
+.quote-container {
+    position: relative;
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+}
+
+.profile-quote {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    max-width: 550px;
+    text-align: center;
+    /* Center alignment for the quote */
+    margin: 0 auto;
+    /* Align left but centered internal text */
+    position: relative;
+}
+
+.profile-quote::before {
+    content: '“';
+    position: absolute;
+    top: -1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 4rem;
+    color: var(--color-accent);
+    opacity: 0.08;
+    font-family: serif;
+}
+
+.profile-desc {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--color-text-muted);
+    max-width: 700px;
+}
+
+.story-section {
+    padding: 7rem 0;
+    /* Balanced padding */
+    background-color: #f8f9fa;
+    border-top: 1px solid #D0D0D0;
+    border-bottom: 1px solid #D0D0D0;
+}
+
+.story-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 2.5rem;
+    color: #1a1c1e;
+    letter-spacing: -1px;
+    text-align: left;
+    /* Shifted to left to align with text */
+}
+
+.story-flex-container {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    max-width: 1000px;
+    /* Keep overall wrapper controlled */
+    margin: 0 auto;
+}
+
+.story-image-container {
+    flex-shrink: 0;
+    width: 35%;
+    /* The dog image takes up 35% of the side */
+    display: flex;
+    justify-content: center;
+}
+
+.story-dog-img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    mix-blend-mode: multiply;
+    /* Great for line-art on white/grey backgrounds */
+    opacity: 0.85;
+    /* Subtle integration */
+}
+
+.story-content {
+    flex-grow: 1;
+    width: 65%;
+}
+
+.story-text {
+    font-size: 1.1rem;
+    line-height: 1.9;
+    color: var(--color-text-muted);
+    margin-bottom: 2rem;
+    text-align: left;
+    /* Better for reading long text */
+}
+
+.about-content-wrapper {
+    padding: 6rem 0;
+    background-color: #ffffff;
+}
+
+.info-card {
+    background-color: #ffffff;
+    border: 1px solid #E5E5E5;
+    padding: 3rem;
+    border-radius: 8px;
+    margin-bottom: 3rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--color-text-main);
+    margin-bottom: 2.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.section-subtitle span {
+    font-size: 1.25rem;
+    opacity: 0.8;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    padding: 1.5rem 0;
+}
+
+.info-title {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--color-accent);
+}
+
+.info-desc {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    line-height: 1.7;
+}
+
+.info-grid-divider {
+    height: 1px;
+    background-color: #eeeeee;
+    margin: 0.5rem 0;
+}
+
+/* Response Overrides for About */
+@media (max-width: 768px) {
+    .profile-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 3rem;
+    }
+
+    .profile-quote::before {
+        left: 0;
+        top: -2.5rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+
+/* Footer override */
 footer {
     padding: 5rem 0;
-    border-top: 1px solid #D8D8D8; /* More cohesive border */
+    border-top: 1px solid #D8D8D8;
     text-align: center;
     background-color: #ffffff;
 }
@@ -417,21 +748,54 @@ footer p {
 
 /* Responsive Overrides */
 @media (max-width: 768px) {
-    .container { padding: 0 1.5rem; }
-    .hero-name { font-size: 2.8rem; }
-    .hero-wrapper { padding: 5rem 0; }
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    .hero-name {
+        font-size: 2.8rem;
+    }
+
+    .hero-wrapper {
+        padding: 5rem 0;
+    }
+
     .specialization-grid {
         grid-template-columns: 1fr;
         gap: 3rem;
     }
-    .spec-text { max-width: 100%; }
-    
+
+    .spec-text {
+        max-width: 100%;
+    }
+
     /* CRITICAL: LOGO MOBILE STYLES (DO NOT TOUCH PER USER REQUEST) */
-    .logo-wrapper { width: 80px; height: 80px; top: 1rem; right: 1rem; }
-    .corner-logo { width: 100%; height: 100%; object-fit: cover; }
-    
-    nav ul { gap: 1.5rem; }
-    nav ul li a { font-size: 0.6rem; }
-    .investigations-wrapper { padding: 5rem 0; }
-    .card { padding: 2.5rem; }
+    .logo-wrapper {
+        width: 80px;
+        height: 80px;
+        top: 1rem;
+        right: 1rem;
+    }
+
+    .corner-logo {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    nav ul {
+        gap: 1.5rem;
+    }
+
+    nav ul li a {
+        font-size: 0.6rem;
+    }
+
+    .investigations-wrapper {
+        padding: 5rem 0;
+    }
+
+    .card {
+        padding: 2.5rem;
+    }
 }
