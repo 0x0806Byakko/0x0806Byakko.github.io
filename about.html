@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre mí | Fernando Albarrán</title>
+    <meta name="description"
+        content="Fernando Albarrán es un Analista SOC especializado e investigador en Inteligencia de Amenazas.">
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* INSTRUCCIONES: Mejoras estructurales y visuales exclusivas para about.html (PREMIUM CTI) */
+
+        /* Gradiente sutil de fondo para profundidad */
+        body {
+            background: linear-gradient(135deg, #ffffff 0%, #f4f5f7 100%);
+            position: relative;
+        }
+
+        /* 1. Compactar el bloque superior */
+        .about-hero-wrapper {
+            padding: 4rem 0 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .hero-title {
+            margin-bottom: 0.2rem;
+            padding-bottom: 0;
+            color: var(--color-text-main);
+        }
+
+        .hero-title::after {
+            display: none;
+        }
+
+        .hero-name-block {
+            margin-top: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.2rem;
+        }
+
+        .profile-name {
+            margin-bottom: 0.5rem;
+            /* Pequeño margen para la línea decorativa */
+            font-size: 2.8rem;
+            line-height: 1.2;
+            color: var(--color-text-main);
+            position: relative;
+        }
+
+        /* Línea decorativa sutil debajo del nombre */
+        .profile-name::after {
+            content: '';
+            position: absolute;
+            bottom: -0.4rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 1px;
+            background-color: #d1d5db;
+            /* Gris claro */
+        }
+
+        .profile-role {
+            margin-bottom: 0;
+            letter-spacing: 3px;
+            font-size: 0.95rem;
+            color: var(--color-accent);
+            text-transform: uppercase;
+        }
+
+        /* 2. Reestructurar la sección de perfil (Centro Absoluto) */
+        .profile-section {
+            padding: 3rem 0 6rem;
+            position: relative;
+        }
+
+        .profile-card {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 0;
+            max-width: 950px;
+            width: 100%;
+            margin: 0 auto;
+            position: relative;
+            background: transparent;
+            box-shadow: none;
+            border: none;
+        }
+
+        /* 3. Corregir comportamiento de la imagen (Bloqueada a la izquierda) */
+        .profile-photo-container {
+            position: absolute;
+            left: -8rem;
+            /* Empujada significativamente hacia la izquierda para separarla del texto central */
+            top: 1rem;
+            width: clamp(130px, 15vw, 200px);
+            height: clamp(130px, 15vw, 200px);
+            overflow: hidden;
+            border-radius: 50%;
+            border: 4px solid #fff;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08), 0 0 0 1px #E5E5E5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 5;
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* CENTRO: Cita, Descripción, Botón */
+        .profile-info {
+            position: relative;
+            text-align: center;
+            align-items: center;
+            margin: 0 auto;
+            max-width: 600px;
+            /* Limitado a 600px como requerido */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            z-index: 10;
+        }
+
+        .quote-container {
+            position: relative;
+            margin-bottom: 2.5rem;
+        }
+
+        .profile-quote {
+            text-align: center;
+            margin: 0;
+            font-size: 1.35rem;
+            /* Más destacada */
+            font-style: italic;
+            /* Cursiva */
+            line-height: 1.8;
+            color: var(--color-text-main);
+            padding: 0;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Comilla gigante decorativa de fondo */
+        .profile-quote::before {
+            content: '“';
+            position: absolute;
+            left: 50%;
+            top: -3.5rem;
+            transform: translateX(-50%);
+            font-size: 6rem;
+            font-family: Georgia, serif;
+            color: var(--color-accent);
+            opacity: 0.05;
+            /* Muy sutil */
+            z-index: -1;
+        }
+
+        .profile-desc {
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 2.5rem;
+            font-size: 1.05rem;
+            color: #6b7280;
+            /* Gris medio (ligero) */
+            line-height: 2;
+            /* Interlineado aumentado */
+            font-weight: 400;
+        }
+
+        /* 4. BOTONES PREMIUM */
+        .btn-primary {
+            align-self: center;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+            /* Sombra elegante */
+        }
+
+        /* DERECHA: Perro dibujado que estaba antes */
+        .profile-dog-container {
+            position: absolute;
+            /* Extraído del flujo, empujado a la derecha radicalmente */
+            right: -28rem;
+            top: 16rem;
+            /* Movido para abajo la mitad de distancia horizontal */
+            width: clamp(300px, 35vw, 600px);
+            opacity: 0.85;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .profile-dog-img {
+            max-width: 100%;
+            height: auto;
+            mix-blend-mode: multiply;
+        }
+
+        /* Responsive */
+        @media (max-width: 950px) {
+            .profile-photo-container {
+                left: 2rem;
+            }
+
+            .profile-dog-container {
+                right: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .profile-card {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 2rem;
+            }
+
+            .profile-photo-container {
+                position: relative;
+                left: 0;
+                top: 0;
+                margin-bottom: 1rem;
+            }
+
+            .profile-quote {
+                font-size: 1.15rem;
+            }
+
+            .profile-dog-container {
+                display: none;
+            }
+        }
+
+        /* 5. SECCIÓN MI HISTORIA (Editorial CTI - Libro Moderno) */
+        .story-section {
+            padding: 12rem 0 9rem 0 !important; /* Respiro vertical mayor entre hero e historia */
+            background: linear-gradient(to bottom, #ffffff 0%, #e1f0fa 20%, #e1f0fa 90%, #ffffff 100%) !important;
+            border-top: none !important;
+            border-bottom: none !important;
+            position: relative;
+        }
+
+        .editorial-container {
+            max-width: 800px !important;
+            /* Más ancho para dar margen respirable a las líneas */
+            margin: 0 auto;
+            position: relative;
+            padding: 0 1rem;
+        }
+
+        .editorial-content {
+            width: 100% !important;
+        }
+
+        .story-title {
+            text-align: center !important;
+            font-size: 2.2rem;
+            margin-bottom: 5rem !important;
+            /* Mayor separación con el inicio del texto */
+            color: var(--color-text-main);
+            position: relative;
+        }
+
+        .story-title::after {
+            content: '';
+            position: absolute;
+            bottom: -1.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 1px;
+            background-color: #d1d5db;
+        }
+
+        /* Contenedor del texto con DOBLE LÍNEA VERTICAL */
+        .story-body {
+            position: relative;
+            padding: 2rem 40px;
+            /* 40px de separación pura entre el texto y las líneas */
+        }
+
+        .story-body::before,
+        .story-body::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background-color: #eaeaea;
+            /* Gris muy suave */
+        }
+
+        .story-body::before {
+            left: 0;
+            /* Línea izquierda */
+        }
+
+        .story-body::after {
+            right: 0;
+            /* Línea derecha */
+        }
+
+        .story-text {
+            color: #4b5563 !important;
+            font-size: 1.05rem !important;
+            line-height: 1.85 !important;
+            /* Extra legibilidad/aire */
+            margin-bottom: 2.2rem !important;
+            /* Más espacio inter-párrafo */
+            font-weight: 400;
+        }
+
+        .story-text:last-of-type {
+            margin-bottom: 0 !important;
+        }
+
+        /* 6. FRASES CLAVE DESTACADAS Y CENTRALES */
+        .story-highlight {
+            font-size: 1.35rem;
+            /* Tamaño incrementado */
+            font-style: italic;
+            color: var(--color-text-main);
+            margin: 4.5rem auto;
+            /* Extremadamente oxigenada e independiente */
+            padding: 0;
+            line-height: 1.6;
+            text-align: center;
+            /* Destacada en el centro */
+            position: relative;
+            max-width: 500px;
+        }
+
+        /* Comillas decorativas sutiles en la cita central */
+        .story-highlight::before {
+            content: '“';
+            position: absolute;
+            left: 50%;
+            top: -2.5rem;
+            transform: translateX(-50%);
+            font-size: 4rem;
+            font-family: Georgia, serif;
+            color: var(--color-accent);
+            opacity: 0.05;
+            z-index: -1;
+        }
+
+        /* Frase especial final (Mantiene centrado pero cierra el bloque) */
+        .final-highlight {
+            margin-top: 5rem;
+            margin-bottom: 0;
+        }
+
+        .final-highlight::before {
+            display: none;
+            /* Quitamos las comillas aquí para que actúe solo como cierre rotundo y limpio */
+        }
+
+        /* Ajustes Mobile de la historia para que las líneas desaparezcan si limitan el espacio */
+        @media (max-width: 600px) {
+            .story-body {
+                padding: 1rem 15px;
+            }
+
+            .story-body::before,
+            .story-body::after {
+                display: none;
+                /* Quitamos bordes en móvil para aprovechar la pantalla */
+            }
+
+            .story-highlight {
+                font-size: 1.15rem;
+                margin: 3rem auto;
+            }
+        }
+
+        /* ---------------------------------------------------
+           7. TRAYECTORIA PROFESIONAL (Cartas Independientes)
+           --------------------------------------------------- */
+        .trayectoria-section {
+            padding: 8rem 0 10rem !important;
+            /* Gran espacio superior de separación (>100px) */
+            background-color: transparent !important;
+            border: none !important;
+        }
+
+        .trayectoria-container {
+            max-width: 1150px;
+            /* Ancho amplio para respirabilidad en grid de 2 columnas */
+            margin: 0 auto;
+            position: relative;
+            padding: 0 1rem;
+        }
+
+        .trayectoria-cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2.5rem;
+        }
+
+        /* 1. Experiencia estelar ocupando toda la fila con máxima presencia */
+        .trayectoria-cards>.trayectoria-card:nth-child(1) {
+            grid-column: 1 / -1;
+            padding: 5rem 6rem;
+            /* Aumentado sustancialmente para lograr un efecto premium */
+            margin-bottom: 2rem;
+            /* Mayor separación vertical de la fila inferior */
+        }
+
+        /* 2. Las siguientes dos tarjetas recuperan 1fr (ancho equitativo 50/50%) en la segunda fila */
+        .trayectoria-cards>.trayectoria-card:nth-child(2),
+        .trayectoria-cards>.trayectoria-card:nth-child(3) {
+            grid-column: span 1;
+        }
+
+        .trayectoria-card {
+            flex: 1;
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 3.5rem 3.5rem;
+            /* Homogeneizado y elegante */
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.04), 0 4px 12px rgba(0, 0, 0, 0.02);
+            border: 1px solid #f3f4f6;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-section-title {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--color-text-main, #1a1a1a);
+            margin-top: 0;
+            margin-bottom: 3.5rem;
+            text-align: left;
+            position: relative;
+        }
+
+        /* Línea bajo el subtítulo de cada card para darle estructura editorial */
+        .card-section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -1.2rem;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: #d1d5db;
+        }
+
+        .card-item {
+            margin-bottom: 3.5rem;
+            /* Aumentado sustancialmente para Formación respire mejor */
+            text-align: left;
+        }
+
+        .card-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .card-item-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--color-text-main, #1a1a1a);
+            margin: 0 0 0.4rem 0;
+            line-height: 1.4;
+        }
+
+        .card-item-subtitle {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #6b7280;
+            /* Gris medio */
+            margin-bottom: 0.7rem;
+        }
+
+        .card-item-desc {
+            font-size: 1.05rem;
+            line-height: 1.6;
+            color: #4b5563;
+            /* Gris de lectura neutral */
+            margin: 0;
+            font-weight: 400;
+        }
+
+        @media (max-width: 850px) {
+            .trayectoria-cards {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .trayectoria-cards>.trayectoria-card:nth-child(1) {
+                grid-column: auto;
+                padding: 3rem 2rem;
+                margin-bottom: 0;
+            }
+
+            .trayectoria-cards>.trayectoria-card:nth-child(2),
+            .trayectoria-cards>.trayectoria-card:nth-child(3) {
+                grid-column: auto;
+            }
+
+            .trayectoria-card {
+                padding: 3rem 2rem;
+            }
+
+            /* Colapsar el grid interno de Certificaciones en móvil */
+            .cert-grid-layout {
+                grid-template-columns: 1fr !important;
+                gap: 0 !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="sidebar-accent"></div>
+
+    <div class="logo-wrapper logo-left">
+        <img src="logo.png" alt="Branding Logo" class="corner-logo">
+    </div>
+
+    <header>
+        <nav>
+            <div class="container">
+                <ul>
+                    <li><a href="index.html">INICIO</a></li>
+                    <li><a href="about.html" class="active">SOBRE MÍ</a></li>
+                    <li><a href="investigations.html">INVESTIGACIONES</a></li>
+                    <li><a href="contact.html">CONTACTO</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about-hero-wrapper">
+            <div class="container">
+                <h1 class="hero-title">Sobre mí</h1>
+                <div class="hero-name-block">
+                    <h2 class="profile-name">Fernando Albarrán</h2>
+                    <p class="profile-role">SOC Analyst | Criminólogo</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="profile-section">
+            <div class="container">
+                <div class="profile-card">
+                    <div class="profile-photo-container">
+                        <img src="perfil.jpg" alt="Fernando Albarrán" class="profile-img">
+                    </div>
+                    <div class="profile-info">
+                        <div class="quote-container">
+                            <p class="profile-quote">
+                                "Cuando algo parece imposible de encontrar, normalmente solo significa que no se ha
+                                buscado lo suficiente. Deja, que ya lo busco yo."
+                            </p>
+                        </div>
+                        <p class="profile-desc">
+                            Hola, mi nombre es Fernando Albarrán, gaditano y criminólogo con base técnica en
+                            administración de sistemas (ASIR) y estudiante de Ingeniería
+                            Informática.
+
+                            Actualmente trabajo como SOC Analyst en Telefónica, para un cliente del sector bancario,
+                            donde analizo y gestiono eventos de seguridad desde una perspectiva operativa. Sin embargo,
+                            mi enfoque va más allá de lo puramente técnico: me interesa comprender el contexto, el
+                            comportamiento y la intención detrás de cada amenaza.
+
+                            De forma paralela, desarrollo investigaciones propias centradas en OSINT, explorando
+                            información, conectando datos y extrayendo conclusiones que no son evidentes a simple vista.
+
+                            Para mí, la diferencia no está solo en las herramientas, sino en saber qué buscar, dónde
+                            hacerlo y cómo interpretarlo.
+                        </p>
+                        <div
+                            style="display: flex; gap: 1rem; justify-content: center; align-items: center; flex-wrap: nowrap;">
+                            <a href="contact.html" class="btn-primary"
+                                style="border-radius: 50px; background-color: #0d6efd; color: #ffffff; border: none; white-space: nowrap; padding-left: 2rem; padding-right: 2rem;">Contáctame</a>
+                            <a href="#trayectoria" class="btn-primary"
+                                style="border-radius: 50px; background-color: #6c757d; color: #ffffff; border: none; white-space: nowrap; padding-left: 2rem; padding-right: 2rem;">Ver
+                                mi trayectoria</a>
+                        </div>
+                    </div>
+                    <div class="profile-dog-container">
+                        <img src="perro.png" alt="Dibujo de perro en trazo" class="profile-dog-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="story-section">
+            <div class="container editorial-container">
+                <div class="story-content editorial-content">
+                    <div
+                        style="display: flex; justify-content: center; align-items: center; margin-bottom: 5rem; position: relative; width: 100%;">
+                        <h2 class="story-title" style="margin-bottom: 0 !important; width: fit-content;">Mi historia
+                        </h2>
+                        <div class="profile-photo-container"
+                            style="position: absolute; left: auto; right: -4rem; top: -6rem; margin: 0; width: clamp(100px, 12vw, 160px); height: clamp(100px, 12vw, 160px);">
+                            <img src="perro2.jpeg" alt="Perro con sombrero" class="profile-img">
+                        </div>
+                    </div>
+
+                    <div class="story-body">
+                        <p class="story-text">
+                            De niños, todos teníamos esa profesión soñada que queríamos ejercer de mayores: futbolista,
+                            actor, médico, bombero… Casi todos los niños soñábamos con tener el trabajo más guay de
+                            todos,
+                            porque ¿quién no querría ser bombero, salvar a gente, que te consideren un héroe y, encima,
+                            vivir de ello? Yo, por mi parte, encontré mi profesión guay gracias a Los Hombres de Paco,
+                            cuando tenía seis años.
+                        </p>
+
+                        <p class="story-text">
+                            A medida que vas creciendo, tanto tu vida como tus circunstancias cambian. Te deja de gustar
+                            aquello con lo que soñabas de pequeño, encuentras algo mejor o decides que, simplemente, era
+                            un
+                            sueño de niños. Luego, hay otros niños que crecen y mantienen una misma idea en su cabeza,
+                            un
+                            mismo sueño que acaba convirtiéndose en un objetivo. Yo soy uno de esos.
+                        </p>
+
+                        <p class="story-text">
+                            Yo también quería ser un agente del CNI, como Lucas; investigar bandas de crimen organizado,
+                            como Paco; tener reuniones con altos cargos de la Interpol, como Don Lorenzo. El "problema"
+                            es
+                            que, a mis 27 años, esto no ha cambiado. Ha evolucionado, pero se ha mantenido con su
+                            esencia.
+                        </p>
+
+                        <p class="story-text">
+                            Esto fue lo que me llevó a convertirme en criminólogo y adaptar mis conocimientos
+                            criminológicos
+                            a un entorno digital moderno para buscar donde a otros no se les ocurriría.
+                        </p>
+
+                        <p class="story-text">
+                            Hay una frase que mi madre me repite muy a menudo cuando me manda a buscar algo y que hoy me
+                            define como investigador:
+                        </p>
+
+                        <blockquote class="story-highlight">
+                            “Deja, que ya lo busco yo.”
+                        </blockquote>
+
+                        <p class="story-text">
+                            Mamá, que sepas que he hecho mía esta frase, y cuando alguien necesita que le encuentre algo
+                            desde las entrañas del mundo digital, es mi respuesta: “Deja, que ya lo busco yo.”
+                        </p>
+
+                        <p class="story-text">
+                            Mi madre, Los Hombres de Paco, y, entre otras cosas, mi cabezonería, son las cosas que me
+                            han
+                            llevado a seguir, 20 años después, con los mismos sueños e ilusiones que comencé a tener
+                            cuando
+                            tenía 6 años. Y esto, de manera muy resumida, es la pequeña presentación que te puedo hacer
+                            de
+                            Fernando Albarrán, criminólogo y analista de inteligencia.
+                        </p>
+
+                        <p class="story-text">
+                            Ahora comprendo que la verdadera defensa no reside únicamente en la tecnología instalada,
+                            sino
+                            en la capacidad de anticipar el movimiento del adversario. Cada ser humano es un vector
+                            vulnerable de
+                            ataque y eso, lo entiendo a la perfección. Mi enfoque práctico se basa en la curiosidad
+                            constante y el análisis de datos para encontrar el
+                            'hilo' del que tirar en una investigación.
+                        </p>
+
+                        <blockquote class="story-highlight final-highlight">
+                            Así que deja, que ya lo busco yo.
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="trayectoria-section" id="trayectoria">
+            <div class="trayectoria-container">
+                <!-- Gran espacio superior creado por el padding de trayectoria-section (8rem / >100px) -->
+                <h2 class="story-title" style="margin-bottom: 5rem !important;">Trayectoria profesional</h2>
+
+                <div class="trayectoria-cards">
+
+                    <!-- Tarjeta Izquierda (Experiencia) -->
+                    <div class="trayectoria-card">
+                        <h3 class="card-section-title">Experiencia</h3>
+
+                        <div class="card-item">
+                            <h4 class="card-item-title" style="font-size: 1.35rem; margin-bottom: 0.5rem;">SOC Analyst —
+                                Telefónica Tech</h4>
+                            <div class="card-item-subtitle" style="margin-bottom: 1.5rem;">May 2025 - Actualidad</div>
+
+                            <p class="card-item-desc" style="margin-bottom: 2rem;">Como SOC Analyst, me especializo en
+                                la detección y respuesta ante amenazas de seguridad, con un enfoque principal en
+                                tecnologías EDR. Trabajo con herramientas como SIEM (Google Chronicle), WAF (Akamai),
+                                Trellix y soluciones MDM entre otras, lo que me permite monitorizar, analizar y
+                                correlacionar eventos de seguridad en distintos entornos.</p>
+
+                            <div class="card-item-subtitle"
+                                style="margin-bottom: 0.8rem; color: #4b5563; font-weight: 600;">Funciones clave:</div>
+                            <ul
+                                style="margin: 0 0 0 1.2rem; padding: 0; color: #4b5563; font-size: 1.05rem; line-height: 1.7;">
+                                <li style="margin-bottom: 0.5rem;">Monitorización de eventos de seguridad</li>
+                                <li style="margin-bottom: 0.5rem;">Análisis con SIEM (Chronicle) y EDR (SentinelOne)
+                                </li>
+                                <li style="margin-bottom: 0.5rem;">Respuesta a incidentes</li>
+                                <li style="margin-bottom: 0.5rem;">Detección de phishing y análisis de email</li>
+                                <li>Investigación de IoCs</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta Derecha (Formación) -->
+                    <div class="trayectoria-card">
+                        <h3 class="card-section-title">Formación</h3>
+
+                        <div class="card-item" style="margin-bottom: 4rem;">
+                            <h4 class="card-item-title">Grado en Ingeniería Informática</h4>
+                            <div class="card-item-subtitle">2025 - Act | Universidad Oberta de Catalunya</div>
+                            <ul
+                                style="margin: 0.8rem 0 0 1.2rem; padding: 0; color: #6b7280; font-size: 1rem; line-height: 1.5;">
+                                <li style="margin-bottom: 0.4rem;">Conceptos de malware y análisis básico</li>
+                                <li style="margin-bottom: 0.4rem;">Identificación y explotación de vulnerabilidades web
+                                </li>
+                                <li>Conceptos de privilege escalation y post-explotation</li>
+                            </ul>
+                        </div>
+
+                        <div class="card-item" style="margin-bottom: 4rem;">
+                            <h4 class="card-item-title">Administración de Sistemas Informáticos en Red (ASIR)</h4>
+                            <div class="card-item-subtitle">2024 - 2026 | IFPS Puenteuropa</div>
+                            <ul
+                                style="margin: 0.8rem 0 0 1.2rem; padding: 0; color: #6b7280; font-size: 1rem; line-height: 1.5;">
+                                <li style="margin-bottom: 0.4rem;">Conocimiento de redes y protocolos (TCP/IP, DNS,
+                                    HTTP(s), ARP, DHCP)</li>
+                                <li style="margin-bottom: 0.4rem;">Compresión del modelo OSI y análisis del tráfico de
+                                    red</li>
+                                <li style="margin-bottom: 0.4rem;">Conocimientos de arquitectura de Sistemas Operativos
+                                </li>
+                                <li>Conocimientos básicos en herramientas como Zscaler o Firewalls Palo Alto.</li>
+                            </ul>
+                        </div>
+
+                        <div class="card-item" style="margin-bottom: 0;">
+                            <h4 class="card-item-title">Grado en Criminología</h4>
+                            <div class="card-item-subtitle">2020 - 2024 | Universidad Nacional de Educación a Distancia
+                            </div>
+                            <ul
+                                style="margin: 0.8rem 0 0 1.2rem; padding: 0; color: #6b7280; font-size: 1rem; line-height: 1.5;">
+                                <li style="margin-bottom: 0.4rem;">Métodos de investigación criminológicas y análisis de
+                                    datos</li>
+                                <li style="margin-bottom: 0.4rem;">Elaboración de informes criminológicos y evaluación
+                                    de casos</li>
+                                <li style="margin-bottom: 0.4rem;">Conocimientos en seguridad pública y privada</li>
+                                <li>Estudio de teorías criminológicas y comportamiento delictivo</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta Derecha/Nueva (Certificaciones y habilidades) -->
+                    <div class="trayectoria-card">
+                        <h3 class="card-section-title" style="margin-bottom: 2rem;">Certificaciones y habilidades</h3>
+                        <p class="card-item-desc" style="margin-bottom: 3.5rem; color: #6b7280; font-size: 1.1rem;">
+                            Certificaciones y habilidades orientadas a ciberinteligencia y ciberseguridad</p>
+
+                        <div class="cert-grid-layout" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;">
+
+                            <!-- COLUMNA IZQUIERDA -->
+                            <div style="border-right: 1px solid #f3f4f6; padding-right: 2rem;">
+                                <div class="card-item">
+                                    <h4 class="card-item-title">Certificaciones</h4>
+                                    <ul
+                                        style="margin: 0.8rem 0 0 1.2rem; padding: 0; color: #4b5563; font-size: 1.05rem; line-height: 1.6;">
+                                        <li style="margin-bottom: 0.4rem;">eJPT — INE Security</li>
+                                        <li style="margin-bottom: 0.4rem;">CCNA (ITN & Switching and Routing) — Cisco
+                                        </li>
+                                        <li style="margin-bottom: 0.4rem;">CyberOps Associate — Cisco</li>
+                                        <li style="margin-bottom: 0.4rem;">SC-200 — Microsoft</li>
+                                        <li style="margin-bottom: 0.4rem;">Splunk Enterprise Security Certified Admin -
+                                            Splunk</li>
+                                        <li style="margin-bottom: 0.4rem;">Certified OSINT Expert - Mossé Institute</li>
+                                        <li>BTL1</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- COLUMNA DERECHA -->
+                            <div>
+                                <div class="card-item" style="margin-bottom: 2.5rem;">
+                                    <h4 class="card-item-title">Habilidades técnicas</h4>
+                                    <ul
+                                        style="margin: 0.8rem 0 0 1.2rem; padding: 0; color: #4b5563; font-size: 1.05rem; line-height: 1.6;">
+                                        <li style="margin-bottom: 0.4rem;">OSINT (Open Source Intelligence)</li>
+                                        <li style="margin-bottom: 0.4rem;">Threat Intelligence</li>
+                                        <li style="margin-bottom: 0.4rem;">EDR (Sentinel One, Splunk)</li>
+                                        <li style="margin-bottom: 0.4rem;">SIEM (Google Chronicle, Microsoft Sentinel)
+                                        </li>
+                                        <li style="margin-bottom: 0.4rem;">WAF (Akamai)</li>
+                                        <li>Inteligencia criminal</li>
+                                    </ul>
+                                </div>
+
+                                <div class="card-item" style="margin-bottom: 2.5rem;">
+                                    <h4 class="card-item-title">Habilidades profesionales</h4>
+                                    <ul
+                                        style="margin: 0.8rem 0 0 1.2rem; padding: 0; color: #4b5563; font-size: 1.05rem; line-height: 1.6;">
+                                        <li style="margin-bottom: 0.4rem;">Pensamiento analítico</li>
+                                        <li style="margin-bottom: 0.4rem;">Capacidad investigadora</li>
+                                        <li style="margin-bottom: 0.4rem;">Trabajo bajo presión</li>
+                                        <li style="margin-bottom: 0.4rem;">Proactividad</li>
+                                        <li style="margin-bottom: 0.4rem;">Polivalencia</li>
+                                        <li>Gestión de tickets</li>
+                                    </ul>
+                                </div>
+
+                                <div class="card-item" style="margin-bottom: 0;">
+                                    <h4 class="card-item-title">Idiomas</h4>
+                                    <ul
+                                        style="margin: 0.8rem 0 0 1.2rem; padding: 0; color: #4b5563; font-size: 1.05rem; line-height: 1.6;">
+                                        <li style="margin-bottom: 0.4rem;">Español — Nativo</li>
+                                        <li style="margin-bottom: 0.4rem;">Inglés — B2</li>
+                                        <li>Árabe — A2 (en formación)</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div style="display: flex; justify-content: center; margin-top: 6rem;">
+                    <a href="contact.html" class="btn-primary"
+                        style="border-radius: 50px; background-color: #0d6efd; color: #ffffff; border: none; white-space: nowrap; padding-left: 2.5rem; padding-right: 2.5rem; font-size: 1.1rem; padding-top: 0.8rem; padding-bottom: 0.8rem;">Contáctame</a>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Fernando Albarrán. Analista de Inteligencia.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
